@@ -34,4 +34,6 @@ Debian icon by edent, from [SVGRepo](https://www.svgrepo.com/svg/349333/debian),
 
 Service accounts icon by HashiCorp, from [SVGRepo](https://www.svgrepo.com/svg/448223/gcp), licensed under Logo License.
 
+IT Support icon by Sumit Saengthong, from [SVGRepo](https://www.svgrepo.com/svg/428775/support-online-center), licensed under CC Attribution License
+
 All other logos used on this website are free to use, subject to any restrictions imposed by their respective trademarks.
