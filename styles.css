@@ -22,6 +22,10 @@
   display: none;
 }
 
+html {
+  scroll-padding-top: 80px;
+}
+
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -57,7 +61,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(8px);
   position: fixed;
@@ -120,7 +124,7 @@ section h3 {
 }
 
 #hero-container {
-  height: 1000px;
+  height: 800px;
   width: 100%;
   text-align: left;
   max-width: 1200px;
@@ -158,7 +162,6 @@ section h3 {
   max-width: 600px;
   opacity: 0.9;
 }
-
 
 .btn {
   display: inline-block;
@@ -223,14 +226,18 @@ section h3 {
 .project-card {
   display: flex;
   flex-direction: column;
+  width: 500px;
+  height: 630px;
   background: var(--card-color);
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   padding: 1.5rem;
   align-items: center;
+  justify-content: center;
 }
 
 .project-card h4 {
+  font-size: 28px;
   color: var(--accent-color);
   margin-bottom: 0.5rem;
 }
@@ -257,17 +264,25 @@ section h3 {
 }
 
 .project-image {
-  max-width: 100%;
-  max-height: 500px;
+  width: 400px;
+  height: 300px;
   border-radius: 10px;
   padding: 0;
   margin-top: 1rem;
   transition: transform 0.3s ease;
 }
 
+.tall-image {
+  height: 400px;
+}
+
 .project-image:hover {
   transform: scale(1.05);
   transition: transform 0.3s ease;
+}
+
+.no-rounded-corners {
+  border-radius: 0;
 }
 
 /* About Me */
@@ -346,7 +361,6 @@ section h3 {
 }
 
 /* Contact */
-
 #contact img:hover {
   transform: scale(1.1);
   transition: transform 0.2s ease;
@@ -382,7 +396,7 @@ footer {
     min-height: 800px;
   }
 
-  #hero-container>* {
+  #hero-container > * {
     margin: 10px;
   }
 
