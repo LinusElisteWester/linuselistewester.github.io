@@ -6,6 +6,8 @@ CSS icon by vscode-icons, from [SVGRepo](https://www.svgrepo.com/svg/373535/css)
 
 Javascript icon by vscode-icons, from [SVGRepo](https://www.svgrepo.com/svg/373705/js-official), licensed under MIT.
 
+Typescript icon by vscode-icons, from [SVGRepo](https://www.svgrepo.com/svg/374146/typescript-official), licensed under MIT.
+
 Python icon by vscode-icons, from [SVGRepo](https://www.svgrepo.com/svg/374016/python), licensed under MIT.
 
 C# icon by Garuda Technology, from [SVGRepo](https://www.svgrepo.com/svg/452184/csharp), licensed under MIT

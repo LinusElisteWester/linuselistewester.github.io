@@ -231,7 +231,7 @@ section h3 {
   background: var(--card-color);
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  padding: 1.5rem;
+  padding: 1rem;
   align-items: center;
   justify-content: center;
 }
@@ -244,10 +244,6 @@ section h3 {
 
 .project-card p {
   font-size: 0.95rem;
-}
-
-.project-card a {
-  width: fit-content;
 }
 
 .programming-languages {
@@ -263,6 +259,11 @@ section h3 {
   transition: transform 0.2s ease;
 }
 
+.programming-languages a {
+  width: 25px;
+  height: 25px;
+}
+
 .project-image {
   width: 400px;
   height: 300px;
@@ -274,6 +275,10 @@ section h3 {
 
 .tall-image {
   height: 400px;
+}
+
+.short {
+  height: 550px;
 }
 
 .project-image:hover {
