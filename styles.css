@@ -207,6 +207,10 @@ section h3 {
 }
 
 /* Projects */
+#projects {
+  max-width: 1200px;
+}
+
 .project-grid {
   width: 100%;
   display: flex;
@@ -401,7 +405,7 @@ footer {
     min-height: 800px;
   }
 
-  #hero-container > * {
+  #hero-container>* {
     margin: 10px;
   }
 
