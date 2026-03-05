@@ -124,7 +124,7 @@ section h3 {
 }
 
 #hero-container {
-  height: 800px;
+  margin-top: 100px;
   width: 100%;
   text-align: left;
   max-width: 1200px;
