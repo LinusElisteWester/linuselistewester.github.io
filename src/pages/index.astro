@@ -1,18 +1,13 @@
 ---
 import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import SkillCard from '../components/SkillCard.astro';
+import { projects } from '../data/projects.ts';
+import { skillCategories } from '../data/skills.ts';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Linus Eliste Wester</title>
-  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-</head>
-
-<body>
+<BaseLayout>
   <header>
     <p id="logo">L</p>
     <nav id="nav-links">
@@ -20,7 +15,9 @@ import '../styles/global.css';
       <a href="#projects">Projects</a>
       <a href="#skills-page">Tools & Skills</a>
     </nav>
-    <a href="https://github.com/LinusElisteWester" target="_blank"><img id="github-logo" src="images/github-logo.svg"></a>
+    <a href="https://github.com/LinusElisteWester" target="_blank">
+      <img id="github-logo" src="/images/github-logo.svg" />
+    </a>
   </header>
 
   <section id="hero">
@@ -31,11 +28,9 @@ import '../styles/global.css';
       <h2 id="about-me">About Me</h2>
       <p>
         Hi, I'm Linus, a 19-year-old student at NTI Gymnasiet Uppsala.
-        I've always been curious about how technology works and enjoy exploring how things work behind the
-        scenes.
+        I've always been curious about how technology works and enjoy exploring how things work behind the scenes.
         I spent three years studying Information and Media Technology and
-        I am now working towards becoming an <a href="https://ntigymnasiet.se/program/gymnasieingenjorsprogrammet/" class="underline-link"
-          target="_blank">upper secondary school engineer.</a>
+        I am now working towards becoming an <a href="https://ntigymnasiet.se/program/gymnasieingenjorsprogrammet/" class="underline-link" target="_blank">upper secondary school engineer.</a>
       </p>
       <div id="hero-buttons-container">
         <a href="#contact" class="btn">Contact Me</a>
@@ -43,301 +38,40 @@ import '../styles/global.css';
       </div>
     </div>
     <div id="hero-image">
-      <img src="images/linus.jpg" alt="Photo of Me(Linus)">
+      <img src="/images/linus.jpg" alt="Photo of Me, Linus" />
     </div>
   </section>
 
   <section id="projects">
     <h3>Projects</h3>
     <div class="project-grid">
-      <div class="project-card">
-        <h4>Delikat flora</h4>
-        <p>A modern website with backend integration and database features.</p>
-        <a href="https://delikat.ntig.dev/products_english.html" target="_blank">
-          <img src="images/delikat-flora.png" class="project-image tall-image" alt="Delikat flora project screenshot">
-        </a>
-        <div class="programming-languages">
-          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="images/html-logo.svg" alt=""></a>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="images/css-logo.svg" alt=""></a>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="images/js-logo.svg" alt=""></a>
-          <a href="https://nodejs.org/en" target="_blank"><img src="images/node-js-logo.svg" alt=""></a>
-          <a href="https://expressjs.com/" target="_blank"><img src="images/express-js-logo.svg" alt=""></a>
-          <a href="https://supabase.com/" target="_blank"><img src="images/supabase-logo.svg" alt=""></a>
-          <a href="https://www.python.org/" target="_blank"><img src="images/python-logo.svg" alt=""></a>
-          <a href="https://www.selenium.dev/" target="_blank"><img src="images/selenium-logo.svg" alt=""></a>
-          <a href="https://github.com/NTIG-Uppsala/Delikat-Flora" target="_blank"><img src="images/github-logo.svg" alt=""></a>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <h4>Fjellporten</h4>
-        <p>An interactive web application with dynamic content and backend support.</p>
-        <a href="https://fjellporten.ntig.dev/" target="_blank">
-          <img src="images/fjellporten.png" class="project-image tall-image" alt="Fjellporten project screenshot">
-        </a>
-        <div class="programming-languages">
-          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="images/html-logo.svg" alt=""></a>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="images/css-logo.svg" alt=""></a>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="images/js-logo.svg" alt=""></a>
-          <a href="https://nodejs.org/en" target="_blank"><img src="images/node-js-logo.svg" alt=""></a>
-          <a href="https://expressjs.com/" target="_blank"><img src="images/express-js-logo.svg" alt=""></a>
-          <a href="https://supabase.com/" target="_blank"><img src="images/supabase-logo.svg" alt=""></a>
-          <a href="https://www.python.org/" target="_blank"><img src="images/python-logo.svg" alt=""></a>
-          <a href="https://www.selenium.dev/" target="_blank"><img src="images/selenium-logo.svg" alt=""></a>
-          <a href="https://github.com/NTIG-Uppsala/Fjellporten" target="_blank"><img src="images/github-logo.svg" alt=""></a>
-        </div>
-      </div>
-
-      <div class="project-card short">
-        <h4>Point of Sale frontend</h4>
-        <p>WPF based Point of Sale system. With receipt creation and sqlite database integration.</p>
-        <a href="https://github.com/NTIG-Uppsala/TE4POS" target="_blank">
-          <img src="images/POS.png" class="project-image no-rounded-corners" alt="TE4POS project screenshot">
-        </a>
-        <div class="programming-languages">
-          <a href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank"><img src="images/csharp-logo.svg" alt=""></a>
-          <a href="https://sqlite.org/" target="_blank"><img src="images/sqlite-logo.svg" alt=""></a>
-          <a href="https://github.com/NTIG-Uppsala/TE4POS" target="_blank"><img src="images/github-logo.svg" alt=""></a>
-        </div>
-      </div>
-
-      <div class="project-card short">
-        <h4>Point of Sale Backend</h4>
-        <p>ASP.NET backend for a POS system with APIs and admin panel.</p>
-        <a href="https://github.com/NTIG-Uppsala/TE4POS-Backend" target="_blank">
-          <img src="images/POS-backend.png" class="project-image" alt="TE4POS Backend project screenshot">
-        </a>
-        <div class="programming-languages">
-          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"><img src="images/html-logo.svg" alt=""></a>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"><img src="images/css-logo.svg" alt=""></a>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="images/js-logo.svg" alt=""></a>
-          <a href="https://dotnet.microsoft.com/en-us/apps/aspnet" target="_blank"><img src="images/aspnet-logo.svg" alt=""></a>
-          <a href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank"><img src="images/csharp-logo.svg" alt=""></a>
-          <a href="https://sqlite.org/" target="_blank"><img src="images/sqlite-logo.svg" alt="SQLite"></a>
-          <a href="https://www.debian.org/" target="_blank"><img src="images/debian-logo.svg" alt=""></a>
-          <a href="https://github.com/NTIG-Uppsala/TE4POS-Backend" target="_blank"><img src="images/github-logo.svg" alt=""></a>
-        </div>
-      </div>
+      {projects.map(p => <ProjectCard {...p} />)}
     </div>
   </section>
 
   <section id="skills-page">
     <h3>Tools & Skills</h3>
     <div id="skills-container">
-
-      <div class="skills-category">
-        <h4>Programming Languages</h4>
-        <div class="skills-box">
-          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
-            <div class="skill-card"><img src="images/html-logo.svg" class="skills-image" alt="">
-              <div>HTML</div>
-            </div>
-          </a>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-            <div class="skill-card"><img src="images/css-logo.svg" class="skills-image" alt="">
-              <div>CSS</div>
-            </div>
-          </a>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-            <div class="skill-card"><img src="images/js-logo.svg" class="skills-image" alt="">
-              <div>JavaScript</div>
-            </div>
-          </a>
-          <a href="https://www.typescriptlang.org/" target="_blank">
-            <div class="skill-card"><img src="images/typescript-logo.svg" class="skills-image" alt="">
-              <div>TypeScript</div>
-            </div>
-          </a>
-          <a href="https://www.python.org/" target="_blank">
-            <div class="skill-card"><img src="images/python-logo.svg" class="skills-image" alt="">
-              <div>Python</div>
-            </div>
-          </a>
-          <a href="https://dotnet.microsoft.com/en-us/languages/csharp" target="_blank">
-            <div class="skill-card"><img src="images/csharp-logo.svg" class="skills-image" alt="">
-              <div>C#</div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="skills-category">
-        <h4>Certifications</h4>
-        <div class="skills-box">
-          <a href="https://www.credly.com/badges/7a4b74fc-9218-408c-927f-d113a38746ec/public_url" target="_blank">
-            <div class="skill-card"><img src="images/html-logo.svg" class="skills-image" alt="">
-              <div>HTML</div>
-            </div>
-          </a>
-          <a href="https://www.credly.com/badges/7a4b74fc-9218-408c-927f-d113a38746ec/public_url" target="_blank">
-            <div class="skill-card"><img src="images/css-logo.svg" class="skills-image" alt="">
-              <div>CSS</div>
-            </div>
-          </a>
-          <a href="https://www.credly.com/badges/0b601a49-fd97-4107-a5a7-c7461e3b43b1/public_url" target="_blank">
-            <div class="skill-card"><img src="images/js-logo.svg" class="skills-image" alt="">
-              <div>JavaScript</div>
-            </div>
-          </a>
-          <a href="https://www.credly.com/badges/02f28b04-4350-4bba-b23d-52db006bdb67/public_url" target="_blank">
-            <div class="skill-card"><img src="images/it-support-logo.svg" class="skills-image" alt="">
-              <div>IT Support</div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="skills-category">
-        <h4>Frameworks</h4>
-        <div class="skills-box">
-          <a href="https://playwright.dev/" target="_blank">
-            <div class="skill-card"><img src="images/playwright-logo.svg" class="skills-image" alt="">
-              <div>Playwright</div>
-            </div>
-          </a>
-          <a href="https://react.dev/" target="_blank">
-            <div class="skill-card"><img src="images/react-logo.svg" class="skills-image" alt="">
-              <div>React</div>
-            </div>
-          </a>
-          <a href="https://www.selenium.dev/" target="_blank">
-            <div class="skill-card"><img src="images/selenium-logo.svg" class="skills-image" alt="">
-              <div>Selenium</div>
-            </div>
-          </a>
-          <a href="https://www.scrum.org/resources/what-scrum-module" target="_blank">
-            <div class="skill-card"><img src="images/scrum-logo.svg" class="skills-image" alt="">
-              <div>Scrum</div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="skills-category">
-        <h4>Databases</h4>
-        <div class="skills-box">
-          <a href="https://www.mysql.com/" target="_blank">
-            <div class="skill-card"><img src="images/mysql-logo.svg" class="skills-image" alt="">
-              <div>MySQL</div>
-            </div>
-          </a>
-          <a href="https://sqlite.org/" target="_blank">
-            <div class="skill-card"><img src="images/sqlite-logo.svg" class="skills-image" alt="">
-              <div>SQLite</div>
-            </div>
-          </a>
-          <a href="https://supabase.com/" target="_blank">
-            <div class="skill-card"><img src="images/supabase-logo.svg" class="skills-image" alt="">
-              <div>Supabase</div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="skills-category">
-        <h4>Backend</h4>
-        <div class="skills-box">
-          <a href="https://nodejs.org/en" target="_blank">
-            <div class="skill-card"><img src="images/node-js-logo.svg" class="skills-image" alt="">
-              <div>Node.js</div>
-            </div>
-          </a>
-          <a href="https://expressjs.com/" target="_blank">
-            <div class="skill-card"><img src="images/express-js-logo.svg" class="skills-image" alt="">
-              <div>Express.js</div>
-            </div>
-          </a>
-          <a href="https://dotnet.microsoft.com/en-us/apps/aspnet" target="_blank">
-            <div class="skill-card"><img src="images/aspnet-logo.svg" class="skills-image" alt="">
-              <div>ASP.NET</div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="skills-category">
-        <h4>OS</h4>
-        <div class="skills-box">
-          <a href="https://www.microsoft.com/en-us/windows" target="_blank">
-            <div class="skill-card"><img src="images/blue-squares.svg" class="skills-image" alt="">
-              <div>Windows</div>
-            </div>
-          </a>
-          <a href="https://www.raspberrypi.com/" target="_blank">
-            <div class="skill-card"><img src="images/raspberry-pi-logo.svg" class="skills-image" alt="">
-              <div>Raspbian</div>
-            </div>
-          </a>
-          <a href="https://www.debian.org/" target="_blank">
-            <div class="skill-card"><img src="images/debian-logo.svg" class="skills-image" alt="">
-              <div>Debian</div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="skills-category">
-        <h4>Game Engines</h4>
-        <div class="skills-box">
-          <a href="https://www.pygame.org/news" target="_blank">
-            <div class="skill-card"><img src="images/pygame_logo.svg" class="skills-image" alt="">
-              <div>Pygame</div>
-            </div>
-          </a>
-          <a href="https://www.unity.com/" target="_blank">
-            <div class="skill-card"><img src="images/unity-logo.svg" class="skills-image" alt="">
-              <div>Unity</div>
-            </div>
-          </a>
-          <a href="https://godotengine.org/" target="_blank">
-            <div class="skill-card"><img src="images/godot-logo.svg" class="skills-image" alt="">
-              <div>Godot</div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="skills-category">
-        <h4>Tools</h4>
-        <div class="skills-box">
-          <a href="https://git-scm.com/" target="_blank">
-            <div class="skill-card"><img src="images/git-logo.svg" class="skills-image" alt="">
-              <div>Git</div>
-            </div>
-          </a>
-          <a href="https://docs.cloud.google.com/iam/docs/service-account-overview" target="_blank">
-            <div class="skill-card"><img src="images/gsa-logo.svg" class="skills-image" alt="">
-              <div>Service Accounts</div>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <div class="skills-category">
-        <h4>Professional Skills</h4>
-        <div class="skills-box">
-          <div class="skill-card non-click"><img src="images/team-logo.svg" class="skills-image" alt="">
-            <div>Teamwork</div>
-          </div>
-          <div class="skill-card non-click"><img src="images/problem-solving-logo.svg" class="skills-image" alt="">
-            <div>Problem Solving</div>
+      {skillCategories.map(category => (
+        <div class="skills-category">
+          <h4>{category.title}</h4>
+          <div class="skills-box">
+            {category.skills.map(skill => <SkillCard {...skill} />)}
           </div>
         </div>
-      </div>
+      ))}
     </div>
   </section>
 
   <section id="contact">
     <h3>Contact</h3>
     <p>Do you want to collaborate or just say hi? Get in touch!</p>
-    <p><a href="mailto:linusew.dev@gmail.com"><img src="images/email-logo.svg"></a> linusew.dev@gmail.com</p>
-    <p><a href="https://github.com/LinusElisteWender" target="_blank"><img src="images/github-logo.svg"></a> LinusElisteWester</p>
+    <p><a href="mailto:linusew.dev@gmail.com"><img src="/images/email-logo.svg" /></a> linusew.dev@gmail.com</p>
+    <p><a href="https://github.com/LinusElisteWester" target="_blank"><img src="/images/github-logo.svg" /></a> LinusElisteWester</p>
     <a href="mailto:linusew.dev@gmail.com" class="btn">Send Email</a>
   </section>
 
   <footer>
     © 2026 Linus Eliste Wester – Portfolio
   </footer>
-</body>
-
-</html>
+</BaseLayout>

@@ -1,0 +1,19 @@
+---
+const { href, image, label } = Astro.props;
+---
+
+{
+  href ? (
+    <a href={href} target="_blank">
+      <div class="skill-card">
+        <img src={image} class="skills-image" alt="" />
+        <div>{label}</div>
+      </div>
+    </a>
+  ) : (
+    <div class="skill-card non-click">
+      <img src={image} class="skills-image" alt="" />
+      <div>{label}</div>
+    </div>
+  )
+}

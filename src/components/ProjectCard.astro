@@ -1,0 +1,24 @@
+---
+const { title, description, href, image, imageAlt, tall, langs } = Astro.props;
+---
+
+<div class={`project-card${tall ? "" : " short"}`}>
+  <h4>{title}</h4>
+  <p>{description}</p>
+  <a href={href} target="_blank">
+    <img
+      src={image}
+      class={`project-image${tall ? " tall-image" : ""}`}
+      alt={imageAlt}
+    />
+  </a>
+  <div class="programming-languages">
+    {
+      langs.map((lang: { href: string; logo: string; name: string }) => (
+        <a href={lang.href} target="_blank">
+          <img src={lang.logo} alt={lang.name} />
+        </a>
+      ))
+    }
+  </div>
+</div>

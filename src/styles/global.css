@@ -229,7 +229,7 @@ section h3 {
 .project-card {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 550px;
   height: 630px;
   background: var(--card-color);
   border-radius: 10px;
