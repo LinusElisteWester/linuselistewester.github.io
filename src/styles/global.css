@@ -230,7 +230,7 @@ section h3 {
   display: flex;
   flex-direction: column;
   width: 550px;
-  height: 630px;
+  height: 600px;
   background: var(--card-color);
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -240,7 +240,7 @@ section h3 {
 }
 
 .project-card.short {
-  height: 560px;
+  height: 540px;
 }
 
 .project-card h4 {

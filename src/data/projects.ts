@@ -39,7 +39,7 @@ export const projects = [
   },
   {
     title: "POS Frontend",
-    description: "WPF based Point of Sale system. With receipt creation and sqlite database integration.",
+    description: "A WPF Point of Sale app with receipt printing and SQLite integration.",
     href: "https://github.com/NTIG-Uppsala/TE4POS",
     image: "/images/POS.png",
     imageAlt: "TE4POS project screenshot",
