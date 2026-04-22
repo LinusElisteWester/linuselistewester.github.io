@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: logoFont;
-  src: url('fonts/Notedry.otf');
+  src: url('/fonts/Notedry.otf');
 }
 
 :root {
